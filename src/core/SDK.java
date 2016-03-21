@@ -21,40 +21,40 @@ package core;
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
 import http.Client;
 import platform.Platform;
 
 public class SDK {
 
-    Client client;
-    Platform platform;
+	Client client;
+	Platform platform;
 
-    /**
-     * Initialize the SDK and Platfrom object using appKey appSecret and server
-     * endpoint
-     *
-     * @param appKey
-     *            This is the application key
-     * @param appSecret
-     *            This is application secret
-     * @param server
-     *            This is the server endpoint. Server endpoint can be set to
-     *            SANDBOX or PRODUCTION i.e Platform.Server.SANDBOX or
-     *            Platform.Server.PRODUCTION
-     */
-    public SDK(String appKey, String appSecret, Platform.Server server) {
+	/**
+	 * Initialize the SDK and Platfrom object using appKey appSecret and server
+	 * endpoint
+	 *
+	 * @param appKey
+	 *            This is the application key
+	 * @param appSecret
+	 *            This is application secret
+	 * @param server
+	 *            This is the server endpoint. Server endpoint can be set to
+	 *            SANDBOX or PRODUCTION i.e Platform.Server.SANDBOX or
+	 *            Platform.Server.PRODUCTION
+	 */
+	public SDK(String appKey, String appSecret, Platform.Server server) {
 
-        this.client = new Client();
-        this.platform = new Platform(client, appKey, appSecret, server);
-    }
+		this.client = new Client();
+		this.platform = new Platform(client, appKey, appSecret, server);
+	}
 
-    /**
-     * Returns platform object
-     *
-     * @return platfrom object
-     */
-    public Platform platform() {
-        return this.platform;
-    }
+	/**
+	 * Returns platform object
+	 *
+	 * @return platfrom object
+	 */
+	public Platform platform() {
+		return this.platform;
+	}
 }
-
