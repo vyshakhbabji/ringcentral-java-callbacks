@@ -1,0 +1,22 @@
+group 'org.ringcentral.java'
+version '0.7'
+
+apply plugin: 'java'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    testCompile 'junit:junit:4.12'
+    compile 'org.apache.httpcomponents:httpclient:4.5'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.6.0'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+    compile 'org.json:json:20141113'
+    compile 'com.pubnub:pubnub:3.7.5'
+    compile 'org.bouncycastle:bcprov-jdk16:1.46'
+
+}
